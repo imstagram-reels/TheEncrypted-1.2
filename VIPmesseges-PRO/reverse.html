@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/css/reverse.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <title>VIPmessage-PRO</title>
+    </head>
+    <body>
+    
+    <div class="titel"><h3><span>Welcome to your</span><br>encrypted message web</h3></div>
+    <div class="spaces">
+        <div class="Change-page"><a href="/index.html">Change</a></div><div class="aft"></div>
+        <div class="input-div">
+            <form id="userForm">
+                <textarea class="input" name="input" id="input" placeholder="Enter the encrypted message to decrypt"></textarea>
+                <button type="button" id="button-analyze-and-time" onclick="analyze()">decrypt</button>
+            </form>
+        </div>
+        <div class="result-dv">
+            <img class="copy-icon-2" id="copy-icon-2" src="assets/img/content_copy_24dp__FILL0_wght400_GRAD0_opsz24.svg" onclick="copyText()">
+            <div class="result" name="result" id="result"></div>
+        </div>
+    </div>
+    
+    <div class="delete">
+        <div id="timeDisplay"></div>
+        <form id="getUserForm">
+            <input type="text" id="userIdInput" placeholder="Enter User ID">
+            <button type="submit">Get User Data</button>
+        </form>
+        <div id="userData"></div>
+        <ul id="usersList"></ul>
+    </div>
+    
+
+
+    <script type="module">
+
+
+        
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+        import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js";
+      
+        window.ref = ref;
+        window.child = child;
+        window.get = get;
+        
+        // إعدادات Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCOjAC8Ac9HRrdfmCC40ga_UUjmO7HIe4Q",
+            authDomain: "theencrypted-7a9d4.firebaseapp.com",
+            databaseURL: "https://theencrypted-7a9d4-default-rtdb.firebaseio.com",
+            projectId: "theencrypted-7a9d4",
+            storageBucket: "theencrypted-7a9d4.firebasestorage.app",
+            messagingSenderId: "918846542921",
+            appId: "1:918846542921:web:3b6938838b2c3b97319b98"
+        };
+
+        // تهيئة Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        window.database = getDatabase(app);
+    </script>
+
+    <script src="/assets/js/reverse.js"></script>
+</body>
+</html>
