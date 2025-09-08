@@ -64,8 +64,8 @@ function getUserById(userId) {
       }, 250);
     });
 
-    document.getElementById("result").addEventListener("load", () => {
+/* document.getElementById("result").addEventListener("load", () => {
       const loader = document.getElementById("re-div");
-      setTimeout(() => {
+    /*  setTimeout(() => {
         loader.classList.add("hidden");
-      }, 250);
+     /* }, 250);
