@@ -63,3 +63,9 @@ function getUserById(userId) {
         loader.classList.add("hidden");
       }, 250);
     });
+
+    document.getElementById("result").addEventListener("load", () => {
+      const loader = document.getElementById("re-div");
+      setTimeout(() => {
+        loader.classList.add("hidden");
+      }, 250);
