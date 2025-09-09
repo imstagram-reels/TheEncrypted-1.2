@@ -1,7 +1,7 @@
 html {
   /* background-color: #f3f3f3; */
 
-  background-image: url("https://imstagram-reels.github.io/TheEncrypted-1.2/VIPmesseges-PRO/assets/img/1001132832.png");
+  background-image: url("/assets/img/1001132832.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -137,6 +137,11 @@ body { overflow: hidden;}
   transform: translateY(10px);
   }
 
+.result-dv img:active {
+  background-color: rgb(84 55 96);
+}
+
+  
 .result {
     min-height: 50px;
     /* clip-path: polygon(0 0,calc(100% - 65px) 0,calc(100% - 65px) 15%,calc(100% - 2px) 15%,calc(100% - 2px) 100%, 0 100%); */
@@ -202,7 +207,7 @@ button {
   html {
     /* background-color: rgb(105, 15, 15); */
     /* background-image: linear-gradient(rgb(1, 0, 41),rgb(225 43 226), black); */
-    background-image: url("https://imstagram-reels.github.io/TheEncrypted-1.2/VIPmesseges-PRO/assets/img/1001132832.png");
+    background-image: url("/assets/img/1001132832.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -365,6 +370,8 @@ button:active {
     display: none;
 }
 
+/* */
+
 .re-div {
   height: 100%;
   width: 100%;
@@ -489,21 +496,21 @@ button:active {
 }
 
 
-#re-div {
-  position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
-  background: rgb(58, 5, 82);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  opacity: 1;
-  visibility: visible;
-}
+  #re-div {
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    background: rgb(58, 5, 82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+  }
 
-#re-div.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+  #re-div.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
