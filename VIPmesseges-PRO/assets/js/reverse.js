@@ -1,29 +1,36 @@
 let decodedText = "";
     function analyze() {
       const morseInput = document.getElementById('input').value.trim();
-
+      
       const morseToTextMap = {
         '.----': '1', '..---': '2', '...--': '3', '....-': '4', '.....': '5',
         '-....': '6', '--...': '7', '---..': '8', '----.': '9', '-----': '0',
       };
-
+      
       let words = morseInput.split(" ");
-
+      
       for (let code of words) {
         if (morseToTextMap[code]) {
           decodedText += morseToTextMap[code];
         }
         else if (morseInput.trim() === "") {
-            document.getElementById("result").innerHTML = "Data entry is required to complete the process.";
+          document.getElementById("result").innerHTML = "Data entry is required to complete the process.";
         }
         else {
           decodedText += "#"; // رمز غير معروف
         }
       }
 
-      // document.getElementById("result").innerText = decodedText;
       console.log(decodedText)
-      window.analyze = analyze; // نخليها global باش onclick يقدر يناديها
+      window.analyze = analyze;
+
+      const loader = document.getElementById("re-div");
+    loader.classList.remove("hidden");
+    setTimeout(() => {
+      console.log("تحليل المعلومات ✅");
+      loader.classList.add("hidden");
+    }, 2000);
+
     }
 
 
@@ -57,9 +64,12 @@ function getUserById(userId) {
       results.textContent = "❌ حدث خطأ، تحقق من Console";
     });
 }
+
+
     window.addEventListener("load", () => {
       const loader = document.getElementById("re-div");
       setTimeout(() => {
         loader.classList.add("hidden");
-      }, 250);
+      }, 1000);
     });
+
