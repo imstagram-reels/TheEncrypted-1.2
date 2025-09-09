@@ -364,6 +364,10 @@ button:active {
   border-radius:  6px 0 6px 6px ;
 }
 
+  .re-div {
+  width: 105%;
+}
+  
 }
 
 .delete {
