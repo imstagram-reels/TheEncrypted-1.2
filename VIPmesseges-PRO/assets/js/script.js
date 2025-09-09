@@ -104,9 +104,13 @@
         // نعرض البيانات مباشرة عند فتح الصفحة
         displayUsers();
 
+
+
     window.addEventListener("load", () => {
       const loader = document.getElementById("re-div");
       setTimeout(() => {
         loader.classList.add("hidden");
-      }, 250);
+      }, 1000);
     });
+
+        
